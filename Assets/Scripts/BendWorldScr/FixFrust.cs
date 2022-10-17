@@ -39,7 +39,7 @@ public class FixFrust : MonoBehaviour
     #region Methods
     private static void OnBeginCameraRendering (ScriptableRenderContext ctx, Camera cam)
     {
-        cam.cullingMatrix = Matrix4x4.Ortho(-99, 99, -99, 99, 001f, 99) * cam.worldToCameraMatrix;
+        cam.cullingMatrix = Matrix4x4.Ortho(-1000, 1000, -1000, 1000, 0.5f, 5000) * cam.worldToCameraMatrix;
     }
 
     private static void OnEndCameraRendering(ScriptableRenderContext ctx, Camera cam)
