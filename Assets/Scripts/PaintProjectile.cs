@@ -6,9 +6,13 @@ public class PaintProjectile : MonoBehaviour
 {
     private Rigidbody bulletRb;
 
+    private SetColour setColourScript;
+
     private void Awake()
     {
         bulletRb = GetComponent<Rigidbody>();
+
+        setColourScript = FindObjectOfType<SetColour>();
     }
 
     void Start()
@@ -22,11 +26,26 @@ public class PaintProjectile : MonoBehaviour
     {
         if (other.GetComponent<FloorTarget>() != null)
         {
-            Debug.Log("hit zombie");
-        }
-        else if (other.gameObject.tag == "ZombieHead")
-        {
-            Debug.Log("hit headshot");
+            if (setColourScript.setRed == true)
+            {
+                Debug.Log("hit floor");
+                Color floorColourRed = RedInk();
+                GetComponent<Renderer>().material.color = floorColourRed;
+            }
+
+            if (setColourScript.setGreen == true)
+            {
+                Debug.Log("hit floor");
+                Color floorColourGreen = GreenInk();
+                GetComponent<Renderer>().material.color = floorColourGreen;
+            }
+
+            if (setColourScript.setBlue == true)
+            {
+                Debug.Log("hit floor");
+                Color floorColourBlue = BlueInk();
+                GetComponent<Renderer>().material.color = floorColourBlue;
+            }
         }
         else
         {
@@ -34,6 +53,33 @@ public class PaintProjectile : MonoBehaviour
         }
 
         Destroy(gameObject);
+    }
+
+    private Color RedInk()
+    {
+        return new Color(
+            r: 255,
+            g: 0,
+            b: 0,
+            a: 255);
+    }
+
+    private Color GreenInk()
+    {
+        return new Color(
+            r: 11,
+            g: 161,
+            b: 0,
+            a: 255);
+    }
+
+    private Color BlueInk()
+    {
+        return new Color(
+            r: 0,
+            g: 67,
+            b: 255,
+            a: 255);
     }
 }
 

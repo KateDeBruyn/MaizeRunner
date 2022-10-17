@@ -22,7 +22,7 @@ public class ShooterControls : MonoBehaviour
     [SerializeField]
     private float normalSensitivity;
     [SerializeField]
-    private float aimSensitivity;
+    private float aimSensitivity = 0.2f;
     public Image crosshair;
     #endregion
 
