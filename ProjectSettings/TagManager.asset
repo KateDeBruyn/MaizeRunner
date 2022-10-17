@@ -8,6 +8,8 @@ TagManager:
   - RedInk
   - BlueInk
   - GreenInk
+  - RedBullet
+  - BlueBullet
   layers:
   - Default
   - TransparentFX

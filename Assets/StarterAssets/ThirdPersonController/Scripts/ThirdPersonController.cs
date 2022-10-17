@@ -114,6 +114,8 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			_animator.fireEvents = false;
 		}
 
 		private void Update()

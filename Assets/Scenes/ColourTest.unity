@@ -330,10 +330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df001563c8f5df428f4269379420d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setRed: 0
-  setBlue: 0
-  setGreen: 0
-  setDefault: 0
+  bulletPrefab: {fileID: 5894127758255112782, guid: f2e9c751115a86049a40ef0de4f624c9,
+    type: 3}
+  col: {r: 0, g: 0.7264151, b: 0.068136744, a: 0}
 --- !u!1001 &241028727
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -904,7 +903,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 673541399}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &673541401
 Camera:
   m_ObjectHideFlags: 0
@@ -1065,6 +1064,21 @@ MonoBehaviour:
   normalSensitivity: 200
   aimSensitivity: 100
   crosshair: {fileID: 1555917169}
+--- !u!114 &830315327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830315312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5722ee2c52ce2084bac169a3e305a025, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col2: {r: 0, g: 0, b: 0, a: 0}
+  bulletPrefabulous: {fileID: 5894127758255112782, guid: f2e9c751115a86049a40ef0de4f624c9,
+    type: 3}
 --- !u!1 &907951538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,10 +1189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df001563c8f5df428f4269379420d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setRed: 0
-  setBlue: 0
-  setGreen: 0
-  setDefault: 0
+  bulletPrefab: {fileID: 5894127758255112782, guid: f2e9c751115a86049a40ef0de4f624c9,
+    type: 3}
+  col: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &971349027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,10 +1302,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df001563c8f5df428f4269379420d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  setRed: 0
-  setBlue: 0
-  setGreen: 0
-  setDefault: 0
+  bulletPrefab: {fileID: 5894127758255112782, guid: f2e9c751115a86049a40ef0de4f624c9,
+    type: 3}
+  col: {r: 0, g: 0.06983566, b: 1, a: 0}
 --- !u!1 &979154604
 GameObject:
   m_ObjectHideFlags: 0

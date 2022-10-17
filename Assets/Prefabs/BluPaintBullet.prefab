@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 5011332318721760543}
   - component: {fileID: 4892912452845361936}
   m_Layer: 0
-  m_Name: RedBullet
-  m_TagString: Untagged
+  m_Name: BluPaintBullet
+  m_TagString: BlueBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c085dab6810a7ad43a14322a17f33ccb, type: 2}
+  - {fileID: 2100000, guid: 314b382a7038ada42bb22cd904d84390, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5894127758255112782}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
