@@ -12,7 +12,6 @@ public class ColourTest : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -20,7 +19,7 @@ public class ColourTest : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player" && this.tag == "RedInk")
+        if(other.gameObject.tag == "RedBulltet")
         {
             Color floorColourRed = RedInk();
             GetComponent<Renderer>().material.color = floorColourRed;
