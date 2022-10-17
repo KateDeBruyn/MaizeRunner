@@ -29,7 +29,12 @@ public class PaintProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.TryGetComponent(out MeshRenderer rend))
+        {
+            rend.material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
+        }
         Destroy(gameObject);
+
     }
 
     private Color RedInk()
