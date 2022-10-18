@@ -21,10 +21,7 @@ public class SetColour : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        other.gameObject.GetComponent<ColourControl>().ChangeColour(col);
-
-
-
+         other.gameObject.GetComponent<ColourControl>().ChangeColour(col);
 
         //if (other.gameObject.tag == "Player" && this.tag == "RedInk")
         //{
