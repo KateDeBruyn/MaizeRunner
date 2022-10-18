@@ -12,7 +12,7 @@ public class PaintProjectile : MonoBehaviour
     private void Awake()
     {
         myCol = GetComponent<ColorSelector>().myColor;
-        this.gameObject.GetComponent<MeshRenderer>().material.color = myCol;
+      
         bulletRb = GetComponent<Rigidbody>();
     }
 
@@ -20,6 +20,9 @@ public class PaintProjectile : MonoBehaviour
     {
         float speed = 40f; //suitable for AR and pistol. SMG should be about 60.
         bulletRb.velocity = transform.forward * speed;
+        this.gameObject.GetComponent<MeshRenderer>().material.color = myCol;
+
+
     }
 
     private void Update()
