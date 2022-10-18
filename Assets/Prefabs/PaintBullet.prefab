@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4892912452845361936}
   m_Layer: 0
   m_Name: PaintBullet
-  m_TagString: RedBullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4ca0984939b815341a35895f49a907b9, type: 2}
+  - {fileID: 2100000, guid: 9eec24ac65627154e87ab3cfe0656cfc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

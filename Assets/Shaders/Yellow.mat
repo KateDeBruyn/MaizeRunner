@@ -53,7 +53,7 @@ Material:
     m_Ints: []
     m_Floats:
     - ENABLE_BLENDING: 0
-    - _Amount: 0.008
+    - _Amount: 0
     - _Enable: 0
     - _QueueControl: 0
     - _QueueOffset: 0

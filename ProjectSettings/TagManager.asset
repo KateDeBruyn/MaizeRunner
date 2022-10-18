@@ -5,11 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - RedInk
-  - BlueInk
-  - GreenInk
-  - RedBullet
-  - BlueBullet
+  - Colourable
+  - Pole
+  - Reach
+  - Vault
+  - Slide
+  - Deep Jump
+  - Bullet
   layers:
   - Default
   - TransparentFX
