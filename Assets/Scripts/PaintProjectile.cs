@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PaintProjectile : MonoBehaviour
 {
+   
     private Rigidbody bulletRb;
 
     private SetColour setColourScript;
@@ -21,38 +22,24 @@ public class PaintProjectile : MonoBehaviour
         bulletRb.velocity = transform.forward * speed;
     }
 
-
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.GetComponent<FloorTarget>() != null)
+        
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out MeshRenderer rend))
         {
-            if (setColourScript.setRed == true)
+            if (collision.gameObject.tag == "Colourable")
             {
-                Debug.Log("hit floor");
-                Color floorColourRed = RedInk();
-                GetComponent<Renderer>().material.color = floorColourRed;
+                Debug.Log("painted colourable");
+                rend.material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
             }
-
-            if (setColourScript.setGreen == true)
-            {
-                Debug.Log("hit floor");
-                Color floorColourGreen = GreenInk();
-                GetComponent<Renderer>().material.color = floorColourGreen;
-            }
-
-            if (setColourScript.setBlue == true)
-            {
-                Debug.Log("hit floor");
-                Color floorColourBlue = BlueInk();
-                GetComponent<Renderer>().material.color = floorColourBlue;
-            }
+            
         }
-        else
-        {
-            Debug.Log("hit something else");
-        }
-
         Destroy(gameObject);
+
     }
 
     private Color RedInk()
