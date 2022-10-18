@@ -9,6 +9,9 @@ public class PaintProjectile : MonoBehaviour
 
     private Color myCol;
 
+
+    public delegate void BulletCollide();
+    public static event BulletCollide onBulletCollide;
     private void Awake()
     {
         myCol = GetComponent<ColorSelector>().myColor;
@@ -38,8 +41,14 @@ public class PaintProjectile : MonoBehaviour
             {
                 if (collision.gameObject.TryGetComponent(out ObjectColor objcol))
                 {
-                    rend.material.color = myCol;
-                    othercolor.myColor = myCol;
+                    if (rend.material.color != myCol)
+                    {
+                        rend.material.color = myCol;
+                        othercolor.myColor = myCol;
+                        onBulletCollide();
+                    }
+
+                    
                 }
                 
             }

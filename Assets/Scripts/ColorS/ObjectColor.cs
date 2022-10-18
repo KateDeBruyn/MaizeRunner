@@ -6,6 +6,11 @@ public class ObjectColor : MonoBehaviour
 {
     public Color correctColor;
 
+
+    public Color ReturnColor()
+    {
+        return this.gameObject.GetComponent<MeshRenderer>().material.color;
+    }
     public bool AmICorrectColor()
     {
       
