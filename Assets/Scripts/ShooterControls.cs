@@ -17,7 +17,7 @@ public class ShooterControls : MonoBehaviour
     [SerializeField]
     private LayerMask aimColliderMask = new LayerMask();
     public Transform debugTransform;
-    public Transform bulletProjPrefab;
+    public GameObject bulletProjPrefab;
     public Transform spawnBulletPos;
     [SerializeField]
     private float normalSensitivity;
@@ -32,6 +32,9 @@ public class ShooterControls : MonoBehaviour
 
     private void Awake()
     {
+        bulletProjPrefab = Instantiate(bulletProjPrefab);
+        bulletProjPrefab.SetActive(false);
+
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         thirdPersonController = GetComponent<ThirdPersonController>();
         /*anim = GetComponent<Animator>();*/
@@ -81,7 +84,7 @@ public class ShooterControls : MonoBehaviour
         if (starterAssetsInputs.shoot)
         {
             Vector3 aimDir = (mouseWorldPosition - spawnBulletPos.position).normalized;
-            Instantiate(bulletProjPrefab, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up));
+            Instantiate(bulletProjPrefab, spawnBulletPos.position, Quaternion.LookRotation(aimDir, Vector3.up)).SetActive(true);
             starterAssetsInputs.shoot = false;
         }
 

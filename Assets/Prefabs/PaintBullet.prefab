@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 965028160890647473}
   - component: {fileID: 5011332318721760543}
   - component: {fileID: 4892912452845361936}
+  - component: {fileID: -4032683569215443992}
   m_Layer: 0
   m_Name: PaintBullet
   m_TagString: Untagged
@@ -127,3 +128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df281dfed2dc2f46946b866e604ac3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4032683569215443992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5894127758255112782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a14c1f3b6e173744827c38f64d69f74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorIndex: 0
+  myColor: {r: 0, g: 0, b: 0, a: 0}
