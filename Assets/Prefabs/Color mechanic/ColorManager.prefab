@@ -45,6 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GlobalColors:
-  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0.65334654, a: 0}
   - {r: 0, g: 0.9803941, b: 1, a: 0}
   - {r: 0.2735849, g: 0, b: 0, a: 0}
+  statements:
+  - red
+  - tranquil
+  - dark
+  coloureObjects: []
+  Scores: 

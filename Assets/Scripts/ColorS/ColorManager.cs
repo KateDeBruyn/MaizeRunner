@@ -29,14 +29,20 @@ public class ColorManager : MonoBehaviour
         }
         foreach (ObjectColor obj in coloureObjects)
         {
-            Debug.Log(" COLOR OF OBJ : " + obj.ReturnColor());
+           
 
-            if (GlobalColors.Contains(obj.ReturnColor()))
+
+            for (int i = 0; i < GlobalColors.Count; i++)
             {
-
-                int index = GlobalColors.IndexOf(obj.ReturnColor());
-                Scores[index] += 1;
+                if (obj.ReturnColor() == GlobalColors[i])
+                {
+                    Debug.Log(" COLOR OF OBJ : " + obj.ReturnColor());
+                    int index = i;
+                    Scores[index] += 1;
+                }
             }
+                
+            
         }
 
         int highestScore = 0;
