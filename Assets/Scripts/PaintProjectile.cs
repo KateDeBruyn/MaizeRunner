@@ -31,7 +31,12 @@ public class PaintProjectile : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out MeshRenderer rend))
         {
-            rend.material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
+            if (collision.gameObject.tag == "Colourable")
+            {
+                Debug.Log("painted colourable");
+                rend.material.color = this.gameObject.GetComponent<MeshRenderer>().material.color;
+            }
+            
         }
         Destroy(gameObject);
 

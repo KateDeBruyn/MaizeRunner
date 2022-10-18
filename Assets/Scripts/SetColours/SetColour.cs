@@ -20,8 +20,12 @@ public class SetColour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Colourable")
+        {
+            Debug.Log("painted colourable");
+        }
 
-         other.gameObject.GetComponent<ColourControl>().ChangeColour(col);
+        other.gameObject.GetComponent<ColourControl>().ChangeColour(col);
 
         //if (other.gameObject.tag == "Player" && this.tag == "RedInk")
         //{
@@ -39,4 +43,16 @@ public class SetColour : MonoBehaviour
         //}
 
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+
+    //    if (collision.gameObject.tag == "Colourable")
+    //    {
+    //        Debug.Log("painted colourable");
+    //    }
+
+
+    //    collision.gameObject.GetComponent<ColourControl>().ChangeColour(col);
+    //}
 }
