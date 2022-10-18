@@ -26,12 +26,14 @@ namespace Climbing
 {
     public class InputCharacterController : MonoBehaviour
     {
-        private PlayerControls controls = null;
+        private global::InputCharacterController controls = null;
 
         [HideInInspector] public Vector2 movement;
         [HideInInspector] public bool run;
         [HideInInspector] public bool jump;
         [HideInInspector] public bool drop;
+        [HideInInspector] public bool aim;
+        [HideInInspector] public bool shoot;
 
         private void OnEnable()
         {
@@ -48,7 +50,7 @@ namespace Climbing
         void Awake()
         {
             //Hold and Release
-            controls = new PlayerControls();
+            controls = new global::InputCharacterController();
             controls.Player.Movement.performed += ctx => movement = ctx.ReadValue<Vector2>();
             controls.Player.Movement.canceled += ctx => movement = ctx.ReadValue<Vector2>();
             controls.Player.Jump.performed += ctx => jump = ctx.ReadValueAsButton();
@@ -57,6 +59,7 @@ namespace Climbing
             controls.Player.Drop.canceled += ctx => drop = ctx.ReadValueAsButton();
             controls.Player.Run.performed += ctx => run = ctx.ReadValueAsButton();
             controls.Player.Run.canceled += ctx => run = ctx.ReadValueAsButton();
+            
         }
 
         void ToggleRun()
