@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerColor : MonoBehaviour
 {
-    private GameObject BulletPrefab;
-    private ColorSelector selector;
+    [SerializeField]private GameObject BulletPrefab;
+    [SerializeField]private ColorSelector selector;
 
     private void Start()
     {
-        selector = GetComponent<ShooterControls>().bulletProjPrefab.GetComponent<ColorSelector>() ;
+        selector = GetComponent<Shooter>().bulletProjPrefab.GetComponent<ColorSelector>() ;
     }
 
     public void setGunColor(Color col)
