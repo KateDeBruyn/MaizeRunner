@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SetColour : MonoBehaviour
 {
+    // Script on the ink pots
+
     public GameObject bulletPrefab;
-    [SerializeField] private Color col;
+    public Color col;
 
     void Start()
     {
@@ -20,11 +22,7 @@ public class SetColour : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Colourable")
-        {
-            Debug.Log("painted colourable");
-        }
-
+        // When colliding with other game object, use the CHangeColour function to set the other GO colour to the colour of this object
         other.gameObject.GetComponent<ColourControl>().ChangeColour(col);
 
         //if (other.gameObject.tag == "Player" && this.tag == "RedInk")

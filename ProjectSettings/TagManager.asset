@@ -6,6 +6,12 @@ TagManager:
   tags:
   - CinemachineTarget
   - Colourable
+  - Pole
+  - Reach
+  - Vault
+  - Slide
+  - Deep Jump
+  - Bullet
   layers:
   - Default
   - TransparentFX
