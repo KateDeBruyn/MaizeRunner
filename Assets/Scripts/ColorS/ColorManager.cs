@@ -6,19 +6,34 @@ public class ColorManager : MonoBehaviour
 {
     public List<Color> GlobalColors;
     public List<string> statements;
-    private ObjectColor[] coloureObjects;
-    private List<int> Scores;
+    public ObjectColor[] coloureObjects;
+    public int[] Scores;
 
+    public void Update()
+    {
+        calcValues();
+    }
 
     public void calcValues()
     {
         coloureObjects = FindObjectsOfType(typeof(ObjectColor)) as ObjectColor[];
-        Scores = new List<int>(GlobalColors.Count);
+        Scores = new int[GlobalColors.Count];
+        for (int i = 0; i < Scores.Length; i++)
+        {
+            Scores[i] = 0;
+        }
 
+        for (int i = 0; i < GlobalColors.Count; i++)
+        {
+            Debug.Log("Color : " + i + " " + GlobalColors[i]);
+        }
         foreach (ObjectColor obj in coloureObjects)
         {
+            Debug.Log(" COLOR OF OBJ : " + obj.ReturnColor());
+
             if (GlobalColors.Contains(obj.ReturnColor()))
             {
+
                 int index = GlobalColors.IndexOf(obj.ReturnColor());
                 Scores[index] += 1;
             }
@@ -26,7 +41,7 @@ public class ColorManager : MonoBehaviour
 
         int highestScore = 0;
         int highstScoreIndex = 0;
-        for (int i = 0; i < Scores.Count; i++)
+        for (int i = 0; i < Scores.Length; i++)
         {
             if (Scores[i] > highestScore)
             {
@@ -34,7 +49,6 @@ public class ColorManager : MonoBehaviour
                 highstScoreIndex = i;
             }
         }
-
         Debug.Log(statements[highstScoreIndex]);
 
     }
