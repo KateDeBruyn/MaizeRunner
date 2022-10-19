@@ -25,7 +25,7 @@ public class ColorManager : MonoBehaviour
 
         for (int i = 0; i < GlobalColors.Count; i++)
         {
-            Debug.Log("Color : " + i + " " + GlobalColors[i]);
+            //Debug.Log("Color : " + i + " " + GlobalColors[i]);
         }
         foreach (ObjectColor obj in coloureObjects)
         {
@@ -36,7 +36,7 @@ public class ColorManager : MonoBehaviour
             {
                 if (obj.ReturnColor() == GlobalColors[i])
                 {
-                    Debug.Log(" COLOR OF OBJ : " + obj.ReturnColor());
+                    //Debug.Log(" COLOR OF OBJ : " + obj.ReturnColor());
                     int index = i;
                     Scores[index] += 1;
                 }
@@ -55,7 +55,7 @@ public class ColorManager : MonoBehaviour
                 highstScoreIndex = i;
             }
         }
-        Debug.Log(statements[highstScoreIndex]);
+        //Debug.Log(statements[highstScoreIndex]);
 
     }
 }

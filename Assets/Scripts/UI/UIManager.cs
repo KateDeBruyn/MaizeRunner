@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
     public static bool gamePaused = false;
 
     public GameObject pauseMenuUI;
+    public GameObject helpMenu;
+
     public PlayerControls inputActions;
     public Shooter skooter;
 
-    
+    private void OnEnable()
+    {
+        inputActions.Enable();
+    }
+    private void OnDisable()
+    {
+        inputActions.Disable();
+    }
+
     public void Awake()
     {
         
@@ -28,24 +39,12 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.P))
-        //{
-        //    if (gamePaused)
-        //    {
-        //        Debug.Log("game is paused true and escape key pressed");
-        //        Resume();
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("game is paused false but escape key pressed");
-        //        Pause();
-        //    }
-        //}
+        
     }
 
     public void Resume()
     {
-       // skooter.enabled = true;
+        skooter.enabled = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         gamePaused = false;
@@ -57,7 +56,7 @@ public class UIManager : MonoBehaviour
     {
         if (gamePaused == false)
         {
-            //skooter.enabled = false;
+            skooter.enabled = false;
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0f;
             gamePaused = true;
@@ -72,22 +71,21 @@ public class UIManager : MonoBehaviour
         
     }
 
-    public void LoadMenu()
+    public void LoadHelp()
     {
-
+        helpMenu.SetActive(true);
     }
 
-    public void OnApplicationQuit1()
+    public void Back()
     {
+        helpMenu.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit the game");
         Application.Quit();
     }
 
-    private void OnEnable()
-    {
-        inputActions.Enable();
-    }
-    private void OnDisable()
-    {
-        inputActions.Disable();
-    }
+    
 }
