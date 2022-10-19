@@ -15,6 +15,11 @@ public class Darkness : MonoBehaviour
     Vignette vignette;
     ColorAdjustments colorAdjust;
     // Start is called before the first frame update
+    //death event
+    public delegate void DieDarkness();
+    public static event DieDarkness onDieDarkness;
+
+
     void Start()
     {
         if (globalVolume.profile.TryGet<Vignette>( out vignette))
@@ -39,6 +44,9 @@ public class Darkness : MonoBehaviour
         if (darkness >= maxDarkness)
         {
             darkness = maxDarkness;
+
+            onDieDarkness();
+            darkness = 0;
         }
         // update variables
         if (colorAdjust != null)
