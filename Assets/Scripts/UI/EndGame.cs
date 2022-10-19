@@ -5,12 +5,12 @@ using UnityEngine.UI;
 using TMPro;
 public class EndGame : MonoBehaviour
 {
-    [SerializeField] private GameObject textObj;
+    //[SerializeField] private GameObject textObj;
     [SerializeField] private Text text;
-    [SerializeField] private Canvas canvas;
+    //[SerializeField] private Canvas canvas;
     [SerializeField] private GameObject panel;
 
-    public ColorManager colormanager;
+   private ColorManager colormanager;
 
     private void Awake()
     {
