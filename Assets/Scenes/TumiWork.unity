@@ -17422,26 +17422,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9070076911830248776, guid: 0498a404517ef2d43809c19d44e4b984,
-        type: 3}
-      propertyPath: statements.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070076911830248776, guid: 0498a404517ef2d43809c19d44e4b984,
-        type: 3}
-      propertyPath: statements.Array.data[0]
-      value: red
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070076911830248776, guid: 0498a404517ef2d43809c19d44e4b984,
-        type: 3}
-      propertyPath: statements.Array.data[1]
-      value: tranquil
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070076911830248776, guid: 0498a404517ef2d43809c19d44e4b984,
-        type: 3}
-      propertyPath: statements.Array.data[2]
-      value: dark
-      objectReference: {fileID: 0}
     - target: {fileID: 9070076911830248777, guid: 0498a404517ef2d43809c19d44e4b984,
         type: 3}
       propertyPath: m_Name
@@ -45163,7 +45143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a14c1f3b6e173744827c38f64d69f74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorIndex: 0
+  colorIndex: 2
   myColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1644142955
 GameObject:
