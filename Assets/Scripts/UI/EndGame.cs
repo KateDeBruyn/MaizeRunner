@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class EndGame : MonoBehaviour
 {
-   [SerializeField] private TextMesh text;
+    [SerializeField] private GameObject textObj;
+    [SerializeField] private Text text;
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject panel;
 
@@ -12,8 +14,9 @@ public class EndGame : MonoBehaviour
 
     private void Awake()
     {
+       
         colormanager = FindObjectOfType(typeof(ColorManager)) as ColorManager;
-
+        panel.SetActive(false);
 
     }
 
@@ -22,8 +25,8 @@ public class EndGame : MonoBehaviour
         //show panel display text
         //to show text need to access color manager
         text.text = colormanager.calcValues();
-
-        
+        panel.SetActive(true);
+        //load next scene
         
 
     }
