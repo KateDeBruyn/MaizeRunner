@@ -15,11 +15,13 @@ public class SpawnManager : MonoBehaviour
 
     private void OnEnable()
     {
+        Darkness.onDieDarkness += RespawnPlayer;
         KillBox.onPlayerKill += RespawnPlayer;
         Checkpoint.onActivateCheckpoint += ActiveSpawnPoint;
     }
     private void OnDisable()
     {
+        Darkness.onDieDarkness -= RespawnPlayer;
         KillBox.onPlayerKill -= RespawnPlayer;
         Checkpoint.onActivateCheckpoint -= ActiveSpawnPoint;
     }
