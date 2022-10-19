@@ -14,7 +14,7 @@ public class ColorManager : MonoBehaviour
         calcValues();
     }
 
-    public void calcValues()
+    public string calcValues()
     {
         coloureObjects = FindObjectsOfType(typeof(ObjectColor)) as ObjectColor[];
         Scores = new int[GlobalColors.Count];
@@ -55,7 +55,7 @@ public class ColorManager : MonoBehaviour
                 highstScoreIndex = i;
             }
         }
-        //Debug.Log(statements[highstScoreIndex]);
+        return statements[highstScoreIndex];
 
     }
 }
